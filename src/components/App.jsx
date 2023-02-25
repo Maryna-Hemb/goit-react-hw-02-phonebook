@@ -14,7 +14,7 @@ export class App extends Component {
 
   addContact = newContactValues => {
     let isAdded = false;
-    this.state.contacts.map(name => {
+    this.state.contacts.forEach(name => {
       if (name.name.toLowerCase() === newContactValues.name.toLowerCase()) {
         isAdded = true;
         return alert(`${newContactValues.name} is already in contacts`);
