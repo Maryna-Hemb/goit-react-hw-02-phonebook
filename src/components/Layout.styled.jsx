@@ -1,12 +1,12 @@
 import styled from 'styled-components';
 
 export const Layout = styled.div`
-  width: 50vw;
+  width: 100vw;
   min-height: 100vh;
   padding: 35px;
   margin-left: auto;
   margin-right: auto;
-  font-size: 40px;
+  font-size: 3em;
   text-align: center;
   background-color: #dde1f5;
   color: #010101;
