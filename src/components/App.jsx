@@ -13,15 +13,26 @@ export class App extends Component {
   };
 
   addContact = newContactValues => {
-    let isAdded = false;
+    //   let prevCont = this.state.contacts.map(el => el.name);
+    //   if (prevCont.includes(newContactValues.name)) {
+    //     alert(`${newContactValues.name} is already in contacts`);
+    //     return;
+    //   } else {
+    //     this.setState(prevState => ({
+    //       contacts: [...prevState.contacts, newContactValues],
+    //     }));
+    //   }
+    // };
+
+    let nameRepeat = false;
     this.state.contacts.forEach(name => {
       if (name.name.toLowerCase() === newContactValues.name.toLowerCase()) {
-        isAdded = true;
+        nameRepeat = true;
         return alert(`${newContactValues.name} is already in contacts`);
       }
     });
 
-    if (isAdded) {
+    if (nameRepeat) {
       return;
     }
 
@@ -37,7 +48,7 @@ export class App extends Component {
   };
 
   changeFilter = event => {
-    this.setState({ filter: event.target.value });
+    this.setState({ filter: event.target.value.trim() });
   };
 
   render() {

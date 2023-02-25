@@ -1,5 +1,6 @@
 import PropTypes from 'prop-types';
 import { ContactListItem } from 'components/contactListItem/ContactListItem';
+import { List, ListItem } from './ContactList.styled';
 
 export const ContactList = ({ contacts, onDeleteContact, namefilter }) => {
   const filtredPhonebook = contacts.filter(contact =>
@@ -7,18 +8,18 @@ export const ContactList = ({ contacts, onDeleteContact, namefilter }) => {
   );
   return (
     <div>
-      <ul>
+      <List>
         {filtredPhonebook.map(({ id, name, number }) => (
-          <li key={id}>
+          <ListItem key={id}>
             <ContactListItem
               id={id}
               name={name}
               number={number}
               onDeleteContact={onDeleteContact}
             />
-          </li>
+          </ListItem>
         ))}
-      </ul>
+      </List>
     </div>
   );
 };
