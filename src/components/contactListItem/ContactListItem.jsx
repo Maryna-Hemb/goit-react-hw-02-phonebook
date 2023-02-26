@@ -4,10 +4,7 @@ import { Span, Div, Button } from './ContactListItem.styled';
 export const ContactListItem = ({ id, name, number, onDeleteContact }) => {
   return (
     <>
-      <Div>
-        {name}:<Span>{number}</Span>
-      </Div>
-
+      {name}: {number}
       <Button type="button" onClick={() => onDeleteContact(id)}>
         Delete
       </Button>

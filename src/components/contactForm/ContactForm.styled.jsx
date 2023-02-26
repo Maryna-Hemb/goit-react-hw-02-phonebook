@@ -13,8 +13,7 @@ const Label = styled.label`
 `;
 
 const InputName = styled.p`
-  font-size: 2, 8em;
-  margin: 0 0 20px;
+  margin: 0 0 12px;
 `;
 
 const Button = styled.button`
@@ -22,7 +21,6 @@ const Button = styled.button`
   padding: 12px 25px;
   margin-right: auto;
   margin-left: auto;
-  font-size: 2, 8em;
   border-radius: 15px;
   box-shadow: rgba(0, 0, 0, 0.6) 0px 5px 10px;
   &:hover,

@@ -5,6 +5,7 @@ import { Layout } from './Layout.styled';
 import { ContactForm } from './contactForm/ContactForm';
 import { ContactList } from './contactList/ContactList';
 import { Filter } from './filter/Filter';
+import { TitleH1 } from './App.styled';
 
 export class App extends Component {
   state = {
@@ -55,7 +56,7 @@ export class App extends Component {
     const { contacts, filter } = this.state;
     return (
       <Layout>
-        <h1>Phonebook</h1>
+        <TitleH1>Phonebook</TitleH1>
         <ContactForm onAddNewContact={this.addContact} />
 
         <h2>Contacts</h2>

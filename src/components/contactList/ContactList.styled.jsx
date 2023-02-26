@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 const List = styled.ul`
-  padding: 3em;
+  padding: 20px;
 `;
 
 const ListItem = styled.li`
